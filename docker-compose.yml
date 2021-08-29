@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  ruby:
+    build: 
+      context: .
+    working_dir: /myapp
+    command: irb -I ./lib -r describe_sg_relationships
+    volumes:
+      - .:/myapp
+    stdin_open: true
+    tty: true
